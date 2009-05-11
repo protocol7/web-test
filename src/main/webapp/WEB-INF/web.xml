@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>webtest</display-name>
+  
+  <servlet>  
+    <description>Test Servlet</description>  
+    <servlet-name>test</servlet-name>  
+    <servlet-class>com.protocol7.webtest.TestServlet</servlet-class>  
+    <load-on-startup>2</load-on-startup>  
+  </servlet>  
+
+  <servlet>  
+    <description>JUnit Servlet</description>  
+    <servlet-name>unit</servlet-name>  
+    <servlet-class>com.protocol7.webtest.JUnitServlet</servlet-class>  
+    <load-on-startup>2</load-on-startup>  
+  </servlet>  
+
+
+  <servlet>  
+    <description>NetPerf Servlet</description>  
+    <servlet-name>netperf</servlet-name>  
+    <servlet-class>com.protocol7.webtest.NetPerfServlet</servlet-class>  
+    <load-on-startup>2</load-on-startup>  
+  </servlet>
+  
+  <servlet-mapping>  
+    <servlet-name>test</servlet-name>  
+    <url-pattern>/test</url-pattern>  
+  </servlet-mapping> 
+
+  <servlet-mapping>  
+    <servlet-name>unit</servlet-name>  
+    <url-pattern>/unit</url-pattern>  
+  </servlet-mapping> 
+
+  <servlet-mapping>  
+    <servlet-name>netperf</servlet-name>  
+    <url-pattern>/netperf</url-pattern>  
+  </servlet-mapping> 
+  
+</web-app>
